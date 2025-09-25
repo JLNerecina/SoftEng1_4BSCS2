@@ -1,15 +1,14 @@
 package commandPattern;
 
 public class PowerOff implements Command {
-    private Tv tv;
+    private Device device;
 
-    public PowerOff(Tv tv){
-        this.tv = tv;
+    public PowerOff(Device device) {
+        this.device = device;
     }
-
 
     @Override
     public String execute() {
-        return tv.switchOff();
+        return device.switchOff();
     }
 }
